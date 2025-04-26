@@ -11,6 +11,7 @@ import Footer from './Components/Footer'
 import GradientWrapper from './Components/GradientWrapper'
 import HowItWorks from './Components/HowItWorks'
 import WhyChooseUs from './Components/WhyChooseUs'
+import ResumeBuilding from './Components/ResumeBuilding'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,15 +20,16 @@ function App() {
 
 <div className="min-h-screen w-full overflow-x-hidden">
     <GradientWrapper/>
-    <HowItWorks/>
+    {/* <HowItWorks/> */}
     <AboutUs/>
     <Testimonials/>
     <WhyChooseUs/>
     <Plans/>
-    <Footer/>
+    <ResumeBuilding/>
 
     
 
+    <Footer/>
 </div>
 
   )

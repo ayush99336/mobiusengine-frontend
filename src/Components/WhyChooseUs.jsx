@@ -20,8 +20,8 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <div className='items-center justify-center flex flex-col'>
-            <section className="w-1/2 bg-[#EBF1FF] py-20 px-8 rounded-[20px] ">
+    <div className='items-center justify-center flex flex-col m-30'>
+            <section className="w-auto bg-[#EBF1FF] py-20 px-60 rounded-[20px] ">
       <div className="max-w-[1500px] mx-auto text-center">
         <h2 className="text-[32px] md:text-[40px] font-semibold text-[#022183] mb-16">
           Why Choose Us?

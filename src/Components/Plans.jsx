@@ -42,26 +42,8 @@ export default function Plans() {
         </div>
 
         {/* Advance Plan */}
-        <div className="bg-[#0649E7] rounded-[20px] p-12 flex flex-col md:flex-row items-center justify-between mt-16 text-white min-h-[280px]">
-          <div className="text-left space-y-4 mb-8 md:mb-0">
-            <h3 className="text-2xl font-semibold">Advance</h3>
-            <p className="text-sm">Top-tier support for serious job hunters:</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 mt-6">
-              <AdvanceItem text="Everything in Plus" />
-              <AdvanceItem text="Custom Resumes & Cover Letters" />
-              <AdvanceItem text="20 fully customized applications/week" />
-              <AdvanceItem text="Help with complex job searches" />
-              <AdvanceItem text="Access to senior resume experts, Founder & Exec Coaches" />
-            </div>
-          </div>
-          <div className="text-center">
-            {/* Bigger, wider price */}
-            <p className="text-[3rem] md:text-[4rem] font-bold mb-4 tracking-wide">
-              $150<span className="text-xl font-normal">/week</span>
-            </p>
-            <GetStartedButton white />
-          </div>
-        </div>
+
+          <AdvanceCard className="py-10" />
       </div>
     </section>
   );
@@ -128,15 +110,55 @@ function AdvanceItem({ text }) {
 }
 
 
+function AdvanceCard() {
+  return (
+    <div className="bg-[#0649E7] rounded-[24px] p-8 md:p-12 mt-20  text-white 
+                    flex flex-col md:flex-row items-stretch gap-8">
+      {/* LEFT COLUMN */}
+      <div className="flex-1">
+        <h3 className="text-3xl font-semibold">Advance</h3>
+        <p className="mt-2 text-sm">Top-tier support for serious job hunters:</p>
+        <div className="border-t border-white opacity-50 my-4"></div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
+          <Feature text="Everything in Plus" />
+          <Feature text="Custom Resumes & Cover Letters" />
+          <Feature text="20 fully customized applications/week" />
+          <Feature text="Help with complex job searches" />
+          <Feature
+            text="Access to senior resume experts, Founder & Exec Coaches"
+            className="sm:col-span-2"
+          />
+        </div>
+      </div>
 
+      {/* RIGHT COLUMN */}
+      <div className="flex flex-col justify-between items-end mt-6 md:mt-0">
+        {/* Price at top */}
+        <p className="text-[3rem] md:text-[4rem] font-bold tracking-wide m-0 leading-none">
+          $150
+          <span className="text-xl font-normal">/week</span>
+        </p>
+        {/* Button at bottom */}
+        <GetStartedButton white />
+      </div>
+    </div>
+  );
+}
 
-// “Get Started” button
+function Feature({ text, className = '' }) {
+  return (
+    <div className={`flex items-start gap-3 ${className}`}>
+      <FaCheckCircle className="text-green-300 mt-1 flex-shrink-0" />
+      <p className="text-white text-sm">{text}</p>
+    </div>
+  );
+}
+
 function GetStartedButton({ white = false }) {
   return (
     <button
-      className={`rounded-full px-8 py-3 text-sm font-semibold flex items-center justify-center gap-2 w-50 ${
-        white ? 'bg-white text-[#0649E7]' : 'bg-[#0649E7] text-white'
-      }`}
+      className={`rounded-full px-8 py-3 text-sm font-semibold flex items-center justify-center gap-2
+        ${white ? 'bg-white text-[#0649E7]' : 'bg-[#0649E7] text-white'}`}
     >
       Get Started <FaArrowRightLong className="text-sm" />
     </button>
