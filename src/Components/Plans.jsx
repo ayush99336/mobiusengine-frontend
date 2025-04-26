@@ -33,7 +33,7 @@ export default function Plans() {
           </Card>
 
           {/* Plus */}
-          <Card title="Plus" price="$100" suffix="/week" badge={{ text: 'Anonymous', color: 'purple' }}>
+          <Card title="Plus" price="$100" suffix="/week" >
             <PlanItem text="Everything in Starter, with more muscle:" />
             <PlanItem text="Up to 75 apps/week" />
             <PlanItem text="Apply to 15 job titles" />
@@ -49,8 +49,6 @@ export default function Plans() {
   );
 }
 
-// ———————————————————————————————————————————————————————————
-// Generic card wrapper with extra padding & min-height
 function Card({ title, price, suffix, badge, children }) {
   const badgeStyles =
     badge?.color === 'purple'
