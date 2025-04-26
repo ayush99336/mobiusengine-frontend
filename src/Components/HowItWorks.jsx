@@ -28,11 +28,17 @@ export default function HowItWorks() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
             {steps.map((step, index) => (
               <div key={index} className="flex flex-col items-center">
-                <div className="text-[40px] font-bold text-[#022183] border-b-[3px] border-[#0649E7] pb-2 w-12 text-center">
-                  {step.number}
-                </div>
-                <p className="mt-4 text-[#0649E7] text-base font-medium leading-snug px-2">
-                  {step.text}
+                {/* Circle Number */}
+                <div className="w-20 h-20 flex justify-center items-center border-2 border-[#0649E7] text-[#0649E7] rounded-full text-[36px] font-bold">
+  {step.number}
+</div>
+
+  
+                {/* Underlined Text */}
+                <p className="mt-6 text-[#0649E7] text-base font-medium relative">
+                  <span className="border-b-2 border-[#0649E7] pb-1">
+                    {step.text}
+                  </span>
                 </p>
               </div>
             ))}

@@ -5,12 +5,14 @@ export default function HeroSection() {
         <div className="flex flex-col md:flex-row items-center justify-between max-w-[1500px] mx-auto">
           {/* Left Section */}
           <div className="max-w-lg text-center md:text-left">
-            <h1 className="text-[48px] md:text-[64px] font-bold leading-tight">
-              Land job interviews <span className="text-[#64A1FF]">10x faster</span>
-            </h1>
-            <p className="mt-6 text-lg opacity-90">
-              Custom-built resumes that match your goals, keywords, and recruiter expectations.
-            </p>
+          <h1 className="font-sora text-[64px] font-semibold">
+  Land job interviews <span className="text-[#64A1FF]">10x faster</span>
+</h1>
+
+<p className="mt-6 font-dmsans text-lg">
+  Custom-built resumes that match your goals, keywords, and recruiter expectations.
+</p>
+
             <button className="mt-6 bg-white text-[#022183] font-semibold rounded-full px-8 py-3 text-lg hover:bg-gray-100">
               Get Started →
             </button>

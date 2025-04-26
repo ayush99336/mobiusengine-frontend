@@ -10,6 +10,7 @@ import Testimonials from './Components/Testimonials'
 import Footer from './Components/Footer'
 import GradientWrapper from './Components/GradientWrapper'
 import HowItWorks from './Components/HowItWorks'
+import WhyChooseUs from './Components/WhyChooseUs'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +21,11 @@ function App() {
     <GradientWrapper/>
     <HowItWorks/>
     <AboutUs/>
+    <Testimonials/>
+    <WhyChooseUs/>
+    <Plans/>
+    <Footer/>
+
     
 
 </div>

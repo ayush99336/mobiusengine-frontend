@@ -7,7 +7,7 @@ export default function Navbar() {
           <img src={mobiuslogo} alt="MobiusEngine Logo" className="h-250px w-50px object-contain" />
           {/* <span className="text-xl font-semibold">MobiusEngine</span> */}
         </div>
-        <div className="hidden md:flex gap-8 text-sm">
+        <div className="hidden md:flex gap-8 text-lg text-bold">
           <a href="#" className="hover:text-blue-200">Home</a>
           <a href="#about" className="hover:text-blue-200">About Us</a>
           <a href="#plans" className="hover:text-blue-200">Plans</a>
