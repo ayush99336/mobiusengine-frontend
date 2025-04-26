@@ -2,13 +2,13 @@ import { FaPlay, FaArrowUpRightFromSquare } from 'react-icons/fa6';
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="w-full py-20 px-8 bg-white">
+    <section id="testimonials" className="w-full py-20 px-8 bg-white my-10">
       <div className="max-w-[1500px] mx-auto text-center">
         <h2 className="text-[32px] md:text-[40px] font-semibold text-[#022183] mb-16">
           What our clients have to say
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 h-80 ">
           {/* Testimonial Cards */}
           {[1, 2, 3].map((_, index) => (
             <div

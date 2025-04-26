@@ -19,6 +19,7 @@ export default function ResumeBuilding() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[900px] mx-auto">
           <Card
             title="Resume Rebuild"
+            description="Crafted for senior to VP-level professionals ready for their next big step."
             price="$1000"
             subtitle="one time"
             features={[
@@ -33,6 +34,7 @@ export default function ResumeBuilding() {
           />
           <Card
             title="Interview Prep"
+            description="Two sessions to sharpen your story, confidence, and clarity — fast."
             price="$500"
             subtitle="one time"
             features={[
@@ -49,18 +51,25 @@ export default function ResumeBuilding() {
 }
 
 // Card component
-function Card({ title, price, subtitle, features }) {
+function Card({ title, description, price, subtitle, features }) {
   return (
     <div className="border-2 border-[#0649E7] rounded-[20px] p-8 flex flex-col h-full text-left">
+      {/* Title */}
       <h3 className="text-2xl font-semibold text-[#0649E7] mb-2">{title}</h3>
+      
+      {/* Small subtitle */}
+      <p className="text-sm text-[#0649E7] mb-4">{description}</p>
 
-      <div className="mb-6">
+      {/* Price and "one time" in same row */}
+      <div className="flex items-end gap-2 mb-6">
         <p className="text-[2.5rem] font-bold text-[#0649E7] leading-none">{price}</p>
-        <p className="text-[#0649E7] text-sm">{subtitle}</p>
+        <p className="text-sm text-[#0649E7] mb-1">{subtitle}</p>
       </div>
 
+      {/* Thin line */}
       <div className="border-t border-gray-200 my-6"></div>
 
+      {/* Features list */}
       <div className="flex-1 space-y-4 mb-8">
         {features.map((feature, idx) => (
           <div key={idx} className="flex items-start gap-3">
@@ -70,6 +79,7 @@ function Card({ title, price, subtitle, features }) {
         ))}
       </div>
 
+      {/* Button */}
       <div className="mt-auto">
         <GetStartedButton />
       </div>
@@ -77,6 +87,7 @@ function Card({ title, price, subtitle, features }) {
   );
 }
 
+// Button
 function GetStartedButton() {
   return (
     <button className="rounded-full px-8 py-4 text-sm font-semibold flex items-center justify-center gap-2 w-50 mt-10 bg-[#0649E7] text-white">

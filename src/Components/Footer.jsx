@@ -1,78 +1,76 @@
+import React from 'react';
+import { FaLinkedinIn } from 'react-icons/fa';
+import footerlogo from '../assets/footerlogo.png';
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-  
   return (
-    <footer className="w-full bg-[#022183] text-white py-16 px-8">
-      <div className="max-w-[1500px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          {/* Logo and description */}
-          <div className="col-span-1 md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <img src="/logo.png" alt="MobiusEngine Logo" className="h-10 w-10 object-contain" />
-              <span className="text-xl font-semibold">MobiusEngine</span>
+    <footer className="w-full bg-white text-[#0649E7]">
+      <div className="max-w-[1500px] mx-auto px-8 py-12">
+        {/* Top Section */}
+        <div className="flex flex-col md:flex-row justify-between items-start gap-12">
+
+          {/* Left Side */}
+          <div className="flex flex-col space-y-6">
+            {/* Logo */}
+            <div className="flex items-center gap-2">
+              {/* Your logo image */}
+              <img src={footerlogo} alt="MobiusEngine Logo" className="h-
+              0 w-40 object-contain" />
+              {/* Logo Text */}
+              {/* <div className="w-10 h-10 bg-[#0649E7] rounded-full"></div> */}
+              {/* <span className="text-xl font-semibold text-[#0649E7]">MobuisEngine</span> */}
             </div>
-            <p className="text-blue-200 mb-6">
-              AI-powered resume optimization to help you land your dream job faster.
-            </p>
-            <div className="flex space-x-4">
-              {['facebook', 'twitter', 'linkedin', 'instagram'].map((social) => (
-                <a key={social} href={`#${social}`} className="text-blue-200 hover:text-white">
-                  <span className="sr-only">{social}</span>
-                  <div className="w-8 h-8 rounded-full bg-blue-800 flex items-center justify-center">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C6.477 2 2 6.477 2 12c0 5.523 4.477 10 10 10s10-4.477 10-10c0-5.523-4.477-10-10-10z" />
-                    </svg>
-                  </div>
+
+            {/* Divider */}
+            <div className="border-t border-gray-300 w-32 my-2"></div>
+
+            {/* Address / Email / Telephone */}
+            <div className="flex flex-row text-sm space-x-8">
+              <div>
+                <p className="font-semibold">Address</p>
+                <p>1875 Mission St Ste 103 #450</p>
+                <p>San Francisco, CA 94103</p>
+              </div>
+
+              <div>
+                <p className="font-semibold mt-4">Email</p>
+                <a href="mailto:finance@mobiusengine.ai" className="hover:underline">
+                  finance@mobiusengine.ai
                 </a>
-              ))}
+              </div>
+
+              <div>
+                <p className="font-semibold mt-4">Telephone</p>
+                <a href="tel:6508896026" className="hover:underline">
+                  650-889-6026
+                </a>
+              </div>
             </div>
           </div>
-          
-          {/* Links columns */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Product</h3>
-            <ul className="space-y-3 text-blue-200">
-              <li><a href="#features" className="hover:text-white">Features</a></li>
-              <li><a href="#plans" className="hover:text-white">Pricing</a></li>
-              <li><a href="#testimonials" className="hover:text-white">Testimonials</a></li>
-              <li><a href="#faq" className="hover:text-white">FAQ</a></li>
-            </ul>
+
+          {/* Right Side */}
+          <div className="flex flex-col items-start space-y-4">
+            <p className="font-semibold">Socials</p>
+            <div className="flex items-center gap-4">
+              {/* Social Icons */}
+              <a href="#" className="border-2 border-[#0649E7] rounded-full p-2">
+                <FaLinkedinIn className="text-[#0649E7] text-xl" />
+              </a>
+              <a href="#" className="border-2 border-[#0649E7] rounded-full p-2">
+                <FaLinkedinIn className="text-[#0649E7] text-xl" />
+              </a>
+            </div>
           </div>
-          
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Resources</h3>
-            <ul className="space-y-3 text-blue-200">
-              <li><a href="#blog" className="hover:text-white">Blog</a></li>
-              <li><a href="#guides" className="hover:text-white">Resume Guides</a></li>
-              <li><a href="#templates" className="hover:text-white">Templates</a></li>
-              <li><a href="#webinars" className="hover:text-white">Webinars</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Company</h3>
-            <ul className="space-y-3 text-blue-200">
-              <li><a href="#about" className="hover:text-white">About Us</a></li>
-              <li><a href="#careers" className="hover:text-white">Careers</a></li>
-              <li><a href="#privacy" className="hover:text-white">Privacy Policy</a></li>
-              <li><a href="#terms" className="hover:text-white">Terms of Service</a></li>
-              <li><a href="#contact" className="hover:text-white">Contact</a></li>
-            </ul>
-          </div>
+
         </div>
-        
-        <div className="border-t border-blue-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-blue-200 text-sm">
-            © {currentYear} MobiusEngine AI. All rights reserved.
-          </p>
-          
-          <div className="mt-4 md:mt-0">
-            <select className="bg-blue-800 text-blue-200 rounded px-3 py-1 text-sm">
-              <option value="en">English</option>
-              <option value="es">Spanish</option>
-              <option value="fr">French</option>
-              <option value="de">German</option>
-            </select>
+      </div>
+
+      {/* Bottom Blue Bar */}
+      <div className="bg-[#0649E7] text-white py-4 px-8 text-sm">
+        <div className="max-w-[1500px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+          <p>© 2023 Mobiusservices LLC</p>
+          <div className="flex items-center gap-6">
+            <a href="#" className="hover:underline">Terms & Conditions</a>
+            <a href="#" className="hover:underline">Privacy Policy</a>
           </div>
         </div>
       </div>

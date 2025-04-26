@@ -12,6 +12,7 @@ import GradientWrapper from './Components/GradientWrapper'
 import HowItWorks from './Components/HowItWorks'
 import WhyChooseUs from './Components/WhyChooseUs'
 import ResumeBuilding from './Components/ResumeBuilding'
+import ContactUs from './Components/ContactUs'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,6 +27,7 @@ function App() {
     <WhyChooseUs/>
     <Plans/>
     <ResumeBuilding/>
+    <ContactUs/>
 
     
 
